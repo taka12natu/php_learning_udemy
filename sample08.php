@@ -19,7 +19,7 @@
 <h2>Practice</h2>
 <pre>
 <?php
-
+print (date('n/j(D)',strtotime('+1day')));
 ?>
 </pre>
 </main>
