@@ -24,10 +24,10 @@
 //     print($i . "\n");
 //     $i++;
 // }
-for($i=1; $i<=365; $i++){
-    print($i . "\n");
-
-}
+for($i=1; $i<=365; $i++) {
+    $date = strtotime('+' . $i . 'day');
+    print(date('n/j(D)' , $date));
+    print "\n";
 
 ?>
 </pre>
