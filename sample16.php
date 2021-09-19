@@ -19,19 +19,15 @@
 <h2>Practice</h2>
 <pre>
 <?php
-print (date('w')); //数字で曜日を表す
+$file = file_get_contents ('https://h2o-space.com/feed/json/');
+$json = json_decode($file);
 
-$week_name = ['日','月','火','水','木','金','土','日'];
-
-// print ($week_name); エラーになる
-print ($week_name[1]); //「月」が表示
-
-$week = 4 + 1;
-print($week_name[$week]);
-
-print($week_name[date('w')]); //今日の曜日を表示
-
+foreach ($json->items as $item): //最後セミコロンではなくコロンであることに注意
 ?>
+・<a href="<?php print($item->url); ?>"><?php print
+($item->title); ?></a>
+
+<?php endforeach ?>
 </pre>
 </main>
 </body>    

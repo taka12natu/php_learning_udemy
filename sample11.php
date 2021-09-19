@@ -18,20 +18,14 @@
 <main>
 <h2>Practice</h2>
 <pre>
-<?php
-print (date('w')); //数字で曜日を表す
+3,000円のものから、100円値引きした場合は、
+<?php print (floor(100 / 3000 * 100)); ?>%引きです
 
-$week_name = ['日','月','火','水','木','金','土','日'];
+■そのほかの計算
+切り上げ：<?php print (ceil(100 / 3000 * 100)); ?>
 
-// print ($week_name); エラーになる
-print ($week_name[1]); //「月」が表示
+四捨五入：<?php print (round(1.567, 2)); ?>
 
-$week = 4 + 1;
-print($week_name[$week]);
-
-print($week_name[date('w')]); //今日の曜日を表示
-
-?>
 </pre>
 </main>
 </body>    
