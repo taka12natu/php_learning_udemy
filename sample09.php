@@ -19,18 +19,21 @@
 <h2>Practice</h2>
 <pre>
 <?php
-print (date('w')); //数字で曜日を表す
+//連想配列
+$fruits = ['apple' => 'りんご',
+           'grape' => 'ぶどう',
+           'lemon' => 'レモン'
+        ];
+print($fruits['lemon']);
 
-$week_name = ['日','月','火','水','木','金','土','日'];
+foreach ($fruits as $val) {
+    print ($val . "\n");
+}
 
-// print ($week_name); エラーになる
-print ($week_name[1]); //「月」が表示
-
-$week = 4 + 1;
-print($week_name[$week]);
-
-print($week_name[date('w')]); //今日の曜日を表示
-
+// keyを表示
+foreach ($fruits as $english => $japanese) {
+    print ($english . ':' . $japanese . "\n");
+}
 ?>
 </pre>
 </main>
